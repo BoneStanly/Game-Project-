@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character_Script : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-
+    public float jumpStrength;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class Character_Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            myRigidbody.velocity = Vector2.up * 10;
+            myRigidbody.velocity = Vector2.up * jumpStrength;
         }
     }
 }
